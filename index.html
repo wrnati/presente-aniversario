@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aniversário do meu Amor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 class="title">Para meu <span>José</span>, meu amor 𖹭</h1>
+
+<!-- fotinhas -->
+    <div class="photos">
+
+        <div class="polaroid" onclick="abrir(this, 'Feliz aniversário, meu amor.\n\nSaiba que, independente do que aconteça, eu estarei ao seu lado.\n\nMesmo depois dos momentos difíceis que passamos, nós seguimos, e isso é uma vitória nossa.\n\nEu quero passar o resto da minha vida com você, porque você é uma pessoa tão especial e amorosa.\n\nE mesmo quando você duvida de si mesmo, pra mim você sempre foi bom.\n\nSempre.\n\nEu escolhi te amar…\n\ne continuo escolhendo todos os dias.\n\nEu te amo 𖹭')">
+            <img src="foto1.jpg">
+            <p>"Entre mares e tempestades, é você 𖹭"</p>
+        </div>
+
+        <div class="polaroid" onclick="abrir(this, 'Sou Penélope, e mesmo nas tempestades, eu fico.\n\nSei que o mar é difícil, mas você não navega sozinho.\n\nEu te escolho todos os dias, mesmo quando é luta, mesmo quando é longe.\n\nE se um dia você se perder por anos, como Odisseu, eu ainda estaria aqui, te esperando, esperando, nesperando,\n\nesperando, esperando, esperando,\n\nesperando')">
+            <img src="foto2.jpg">
+            <p>"Mesmo em meio a tempestades e ondas difíceis 𖹭"</p>
+        </div>
+
+    </div>
+
+<!-- referência de epic (WYFILWMA?) -->
+    <div class="side-text">
+        <p><b>WYFILWMA?</b><br>
+        I will fall in love with you<br>
+        over and over again</p>
+
+
+
+        <p><b>Feliz aniversário, meu bem</b><br>
+        <p class="date">02.05.26</p>
+    </div>
+
+</div>
+
+<!-- sobreposição/overlay -->
+<div id="overlay" onclick="fechar()">
+    <div class="overlay-content" onclick="event.stopPropagation()">
+        <img id="overlay-img">
+        <div class="overlay-text" id="overlay-text"></div>
+    </div>
+</div>
+
+<script>
+function abrir(elemento, texto) {
+    const img = elemento.querySelector("img").src;
+
+    document.getElementById("overlay-img").src = img;
+    document.getElementById("overlay-text").innerText = texto;
+
+    document.getElementById("overlay").style.display = "flex";
+}
+
+function fechar() {
+    document.getElementById("overlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
